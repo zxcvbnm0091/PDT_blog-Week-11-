@@ -16,21 +16,22 @@ Flask App
 {% block content %}
 <div class="row">
     {% if article %}
-    <h2>{{ article[0] }}</h2>
+    <p style="font-size: 45px; font-family : 'Times New Roman', Times, serif;">{{ article[0] }}</p>
+    <blockquote class="blockquote">
     <p>
         {{ article[1] }}
-    </p>
-    <p>
-        By: {{ article[2] }}
-    </p>
+    </p><br/>
+    <footer class="blockquote-footer">
+        {{ article[2] }}</footer>
+    </blockquote>
     {% else %}
-    <h3>
+    <h4 style="color:brown">
         Invalid Article
-    </h3>
+    </h4>
     {% endif %}
 </div>
 
 <div>
-    <a href="{{ url_for('index') }}">Back</a>
+    <a class="btn btn-info" href="{{ url_for('index') }}">Back</a>
 </div>
 {% endblock %}

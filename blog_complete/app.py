@@ -35,7 +35,7 @@ def signup():
         #if account exist show error message
         if account:
             flash('Account already exists!')
-        elif match(password):
+        elif not re.search("[A-Z]",password):
             flash('Password must contain at least one uppercase')
         elif len(password) < 5:
             flash('Password must be minumum five characters')

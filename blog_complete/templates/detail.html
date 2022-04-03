@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% if article %}
+{{ article[0] }}
+{% else %}
+Flask App
+{% endif %}
+
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    {% if article %}
+    <h2>{{ article[0] }}</h2>
+    <p>
+        {{ article[1] }}
+    </p>
+    <p>
+        By: {{ article[2] }}
+    </p>
+    {% else %}
+    <h3>
+        Invalid Article
+    </h3>
+    {% endif %}
+</div>
+
+<div>
+    <a href="{{ url_for('index') }}">Back</a>
+</div>
+{% endblock %}

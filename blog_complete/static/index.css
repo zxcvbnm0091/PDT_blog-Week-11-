@@ -19,11 +19,13 @@ nav {
     font-size: 22px;
     margin-left: 20px;
 }
-nav a{
+span, nav a{
     color: #2E33E5;
     text-decoration: none;
     padding: 5px;
 }
+span{
+    color: #000000;
 nav a:hover{
     color: #2E33E5;
     text-decoration: underline;

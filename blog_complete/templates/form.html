@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='form.css')}}">
+{% endblock %}
+
 {% block content %}
 <form>
     <div class="row mb-3">

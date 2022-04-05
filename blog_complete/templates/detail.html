@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 
-{% block css %}
-<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
-{% endblock %}
-
 {% block title %}
 {% if article %}
 {{ article[0] }}

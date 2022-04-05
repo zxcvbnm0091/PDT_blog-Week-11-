@@ -9,22 +9,22 @@
     <div class="row mb-3">
         <label for="title" class="col-2 col-form-label">Title</label>
         <div class="col-6">
-            <input type="text" name="title" id="title" class="form-control" placeholder="Article Title" value="{{ article[1] }}" required/>
+            <input type="text" name="title" id="title" class="form-control" placeholder="Article Title" value="{{ article[1] }}" required />
         </div>
     </div>
     <div class="row mb-3">
         <div class="offset-2 col-6">
-            <textarea rows="8" cols="50" name="body" id="body"> {{ article[2] | trim }} </textarea>
+            <textarea rows="8" cols="71" name="body" id="body"> {{ article[2] | trim }} </textarea>
         </div>
     </div>
     <div class="row">
-        <div class="offset-2 col-6">
-            <button class="btn btn-success" type="submit" name="btnEdit" id="btnEdit">Save</button>
+        <div class="offset-2 col-6 d-inline">
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-dark" href="{{ url_for('index') }}">Back</a>
+                <button class="btn btn-success" style="margin-left:0.5rem" type="submit" name="btnEdit" id="btnEdit">Save</button>
+            </div>
         </div>
     </div>
 </form>
 
-<div>
-    <a class="btn btn-info" href="{{ url_for('index') }}">Back</a>
-</div>
 {% endblock %}

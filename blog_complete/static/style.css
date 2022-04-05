@@ -83,6 +83,8 @@ input::-webkit-input-placeholder {
 #nav-title{
     color: white;
     margin-left: 50px;
+    font-size: 22px;
+    font-weight: 600;
 }
 nav .signup-link{
     font-size: 17px;
